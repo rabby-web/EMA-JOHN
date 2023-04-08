@@ -9,3 +9,13 @@
     border-bottom: 3px solid orange;
     padding: 1px;
 }
+.btn-clear{
+    background-color: #1C2B35;
+    border: 3px solid orange;
+    border: 0;
+    padding: 5px 12px;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
+}

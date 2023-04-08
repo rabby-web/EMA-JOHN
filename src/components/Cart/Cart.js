@@ -2,13 +2,11 @@ import React from 'react';
 import './Cart.css'
 
 const Cart = (props) => {
-    const { cart } = props;
-    // console.log(cart);
+    const { cart, clearCart } = props;
     
     let total = 0;
     let shipping = 0;
     let quantity = 0;
-
 
     for(const product of cart){
         quantity = quantity + 1;
@@ -26,6 +24,7 @@ const Cart = (props) => {
             <p>Total Shipping: ${shipping}</p>
             <p>Tax: ${tax}</p>
             <h4>Grand Total: ${grandTotal.toFixed(2)}</h4>
+            <button className='btn-clear' onClick={clearCart}>Clear Cart</button>
         </div>
     );
 };
