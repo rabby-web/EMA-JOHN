@@ -3,9 +3,8 @@ import './Login.css'
 
 const Login = () => {
     return (
-        <div>
-            <h1>This is Sign Section</h1>
-            <h2>This is login section</h2>
+        <div className='form-container'>
+            <h1 className='form-title'>Login</h1>
         </div>
     );
 };
