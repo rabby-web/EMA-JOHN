@@ -4,14 +4,22 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     const [error, setError] = useState(null)
+
     const handleSubmit = (event) => {
         event.preventDefault()
        const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.confirm.value;
+
+        if(password.length < 6){
+            setError('Password Must be 6 characters')
+            return;
+        }
+
         if(password !==confirm){
             setError('Your Password did not match')
+            return;
         }
         console.log(email, password, confirm) 
     }
@@ -34,6 +42,7 @@ const SignUp = () => {
                 <input className='btn-submit' type="submit" value="Login" />
             </form>
             <p>Already have an account <Link to='/signup'>Please Login</Link></p>
+            <p className='text-error'>{error}</p>
         </div>
     );
 };
