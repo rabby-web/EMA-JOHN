@@ -42,7 +42,7 @@ const Order = () => {
                 {
                     
                         <Link to='/shipping'>
-                        <button className='btn-clear'>Shipping</button>
+                        <button className='btn-clear'>Shipping To Cart</button>
                     </Link>
                 }
             </div>
